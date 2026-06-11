@@ -10,6 +10,7 @@ export default defineConfig(() => {
   const day = String(d.getDate()).padStart(2, '0');
 
   return {
+    base: './',
     define: {
       __APP_VERSION__: JSON.stringify(`Version ${year}-${month}-${day}`),
     },
