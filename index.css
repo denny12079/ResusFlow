@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* High Contrast Light Mode Overrides */
+.high-contrast {
+  --color-white: #000000;
+  --color-black: #ffffff;
+  --color-gray-950: #ffffff;
+  --color-gray-900: #f3f4f6;
+  --color-gray-800: #e5e7eb;
+  --color-gray-700: #9ca3af;
+  --color-gray-600: #555555;
+  --color-gray-500: #3b3b3b;
+  --color-gray-400: #222222;
+  --color-gray-300: #111111;
+  --color-gray-200: #050505;
+  --color-gray-100: #000000;
+
+  /* Red Scale - High Contrast Foreground & Soft Pastel Backgrounds */
+  --color-red-100: #7f1d1d;
+  --color-red-200: #7f1d1d;
+  --color-red-300: #991b1b;
+  --color-red-400: #b91c1c;
+  --color-red-500: #dc2626;
+  --color-red-600: #b91c1c;
+  --color-red-900: #fee2e2;
+  --color-red-950: #fef2f2;
+
+  /* Blue Scale - High Contrast Foreground & Soft Pastel Backgrounds */
+  --color-blue-100: #1e3a8a;
+  --color-blue-200: #1e3a8a;
+  --color-blue-300: #1e40af;
+  --color-blue-400: #2563eb;
+  --color-blue-500: #1d4ed8;
+  --color-blue-900: #dbeafe;
+  --color-blue-950: #eff6ff;
+
+  /* Teal Scale - High Contrast Foreground & Soft Pastel Backgrounds */
+  --color-teal-100: #134e4a;
+  --color-teal-200: #134e4a;
+  --color-teal-300: #115e59;
+  --color-teal-400: #0f766e;
+  --color-teal-500: #0d9488;
+  --color-teal-900: #ccfbf1;
+  --color-teal-950: #f0fdfa;
+
+  /* Orange/Amber Scale - High Contrast Foreground & Soft Pastel Backgrounds */
+  --color-orange-100: #7c2d12;
+  --color-orange-200: #7c2d12;
+  --color-orange-300: #9a3412;
+  --color-orange-400: #c2410c;
+  --color-orange-500: #ea580c;
+  --color-orange-900: #ffedd5;
+  --color-orange-950: #fff7ed;
+
+  /* Indigo Scale - High Contrast Foreground & Soft Pastel Backgrounds */
+  --color-indigo-100: #312e81;
+  --color-indigo-200: #312e81;
+  --color-indigo-300: #3730a3;
+  --color-indigo-400: #4338ca;
+  --color-indigo-500: #4f46e5;
+  --color-indigo-900: #e0e7ff;
+  --color-indigo-950: #eef2ff;
+
+  /* Purple Scale - High Contrast Foreground & Soft Pastel Backgrounds */
+  --color-purple-100: #581c87;
+  --color-purple-200: #581c87;
+  --color-purple-300: #6b21a8;
+  --color-purple-400: #7e22ce;
+  --color-purple-500: #8b5cf6;
+  --color-purple-900: #f3e8ff;
+  --color-purple-950: #faf5ff;
+
+  /* Green Scale - High Contrast Foreground & Soft Pastel Backgrounds */
+  --color-green-100: #14532d;
+  --color-green-200: #14532d;
+  --color-green-300: #166534;
+  --color-green-400: #15803d;
+  --color-green-500: #16a34a;
+  --color-green-900: #dcfce7;
+  --color-green-950: #f0fdf4;
+
+  /* Yellow Scale - High Contrast Foreground & Soft Pastel Backgrounds */
+  --color-yellow-100: #713f12;
+  --color-yellow-200: #713f12;
+  --color-yellow-300: #854d0e;
+  --color-yellow-400: #a16207;
+  --color-yellow-500: #854d0e;
+  --color-yellow-900: #fef9c3;
+  --color-yellow-950: #fefce8;
+
+  /* Pink Scale - High Contrast Foreground & Soft Pastel Backgrounds */
+  --color-pink-100: #831843;
+  --color-pink-200: #831843;
+  --color-pink-300: #9d174d;
+  --color-pink-400: #be185d;
+  --color-pink-500: #be185d;
+  --color-pink-900: #fce7f3;
+  --color-pink-950: #fdf2f8;
+}

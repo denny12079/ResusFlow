@@ -1,0 +1,6 @@
+{
+  "name": "ResusFlow",
+  "description": "提供救護人員OHCA現場合併110BPM節拍器、2分鐘迴圈提醒與用藥紀錄的綜合急救工具。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
