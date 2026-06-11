@@ -1031,7 +1031,7 @@ export default function App() {
                   }
                 }
 
-                return renderLogs.sort((a, b) => a.timeOffset - b.timeOffset).reverse();
+                return renderLogs.filter(log => !log.label.includes('未使用PAD去顫')).sort((a, b) => a.timeOffset - b.timeOffset).reverse();
               })().map((log, index) => {
                 let style;
                 let dotColorClass = "bg-gray-400";
