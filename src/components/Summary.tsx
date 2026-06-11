@@ -161,7 +161,7 @@ export const Summary: React.FC<SummaryProps> = ({ logs, startTime, endTime, hist
       }
     }
 
-    return renderLogs.sort((a, b) => a.timeOffset - b.timeOffset);
+    return renderLogs.filter(log => !log.label.includes('未使用PAD去顫')).sort((a, b) => a.timeOffset - b.timeOffset);
   };
 
   const renderLogs = getRenderLogs();
@@ -292,7 +292,7 @@ export const Summary: React.FC<SummaryProps> = ({ logs, startTime, endTime, hist
       `Low-flow Time: ${lowFlowText}`,
       `-------------------`,
       `詳細處置紀錄:`,
-      ...logs.map(l => `[${formatTime(l.timeOffset)} | ${formatRealTime(l.realTime)}] ${l.label}`)
+      ...logs.filter(l => !l.label.includes('未使用PAD去顫')).map(l => `[${formatTime(l.timeOffset)} | ${formatRealTime(l.realTime)}] ${l.label}`)
     ].join('\n');
     
     navigator.clipboard.writeText(text).then(() => {
