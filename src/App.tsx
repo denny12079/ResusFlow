@@ -182,13 +182,13 @@ export default function App() {
             } else if (beatIndex === 0 && cycleIndex > 0) {
               const id = `6s-v-${cycleIndex}`;
               if (lastVentId.current !== id) {
-                speak("通氣", 0.75); // slower rate to span ~1 second
+                speak("通氣", 0.7); // slower rate to span ~1 second
                 lastVentId.current = id;
               }
             }
           } else {
             if (cycleIndex > 0 && cycleIndex.toString() !== lastVentId.current) {
-              speak("通氣", 0.75);
+              speak("通氣", 0.7);
               lastVentId.current = cycleIndex.toString();
             }
           }
@@ -221,7 +221,7 @@ export default function App() {
           if (cycleMs >= compTime && cycleMs < compTime + 2000) {
             const id = `30:2-v1-${cycleCount}`;
             if (lastVentId.current !== id) {
-               speak("通氣", 0.75); // slower rate to span ~1 second
+               speak("通氣", 0.7); // slower rate to span ~1 second
               setMetronome(false, 110);
               ttsState.current.ventPause = true;
               lastVentId.current = id;
@@ -229,7 +229,7 @@ export default function App() {
           } else if (cycleMs >= compTime + 2000 && cycleMs < compTime + 4000) {
             const id = `30:2-v2-${cycleCount}`;
             if (lastVentId.current !== id) {
-              speak("通氣", 0.75);
+              speak("通氣", 0.7);
               lastVentId.current = id;
             }
           } else if (cycleMs < compTime && ttsState.current.ventPause) {
@@ -255,7 +255,7 @@ export default function App() {
           speak("可以給予 Epinephrine", 1.1, 'MALE'); ttsState.current.epi180 = true;
         }
         if (eElapsed >= 240 && eElapsed < 300 && !ttsState.current.epi240) {
-          speak("距離前次給藥已超過四分鐘", 1.1, 'MALE'); ttsState.current.epi240 = true;
+          speak("距離前次給藥已超過四分鐘", 1.0, 'MALE'); ttsState.current.epi240 = true;
         }
         if (eElapsed >= 300) {
           if (!ttsState.current.epi300) {
