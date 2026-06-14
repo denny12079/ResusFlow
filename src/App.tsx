@@ -138,8 +138,8 @@ export default function App() {
       if (cycleStartTime) {
         const cElapsed = Math.floor((currentNow - cycleStartTime) / 1000);
         const cRemain = 120 - cElapsed;
-        if (cRemain <= 15 && cRemain > 5 && !ttsState.current.cycle15) {
-          speak("十五秒後分析"); ttsState.current.cycle15 = true;
+        if (cRemain <= 10 && cRemain > 5 && !ttsState.current.cycle15) {
+          speak("十秒後分析"); ttsState.current.cycle15 = true;
         }
         if (cRemain <= 5 && cRemain > 0 && !ttsState.current.cycle5) {
           speak("五秒後分析"); ttsState.current.cycle5 = true;
@@ -252,10 +252,10 @@ export default function App() {
       if (currentEpiRefTime && lastEpi !== null) {
         const eElapsed = Math.floor((currentNow - currentEpiRefTime) / 1000);
         if (eElapsed >= 180 && eElapsed < 240 && !ttsState.current.epi180) {
-          speak("建議給予 Epinephrine", 1.1, 'MALE'); ttsState.current.epi180 = true;
+          speak("可以給予 Epinephrine", 1.1, 'MALE'); ttsState.current.epi180 = true;
         }
         if (eElapsed >= 240 && eElapsed < 300 && !ttsState.current.epi240) {
-          speak("距離給予 Epinephrine 已超過四分鐘", 1.1, 'MALE'); ttsState.current.epi240 = true;
+          speak("距離前次給藥已超過四分鐘", 1.1, 'MALE'); ttsState.current.epi240 = true;
         }
         if (eElapsed >= 300) {
           if (!ttsState.current.epi300) {
@@ -1608,7 +1608,7 @@ export default function App() {
               </button>
               <button 
                 onClick={() => {
-                  logEvent('VITALS', 'OHCA - 最後正常時間不詳');
+                  logEvent('VITALS', 'OHCA - 時間不詳');
                   if (ohcaWitness && ohcaBystander && ohcaPAD) setActiveModal('INFO');
                 }} 
                 className={cn("p-4 rounded-xl font-bold text-sm transition-all border", ohcaLastNormal === 'OHCA - 最後正常時間不詳' ? "bg-gray-700 border-gray-500 text-white" : "bg-gray-800 border-gray-700 hover:bg-gray-700 text-white")}
